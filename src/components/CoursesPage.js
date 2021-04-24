@@ -49,4 +49,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
+// This is two function calls side by side. Connect returns a function and that function then calls our component.
+// the below two lines does the same thing which the last line is doing
+//const connectedStateandProps = connect(mapStateToProps, mapDispatchToProps);
+// export default connectedStateandProps(CoursesPage)
+
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
